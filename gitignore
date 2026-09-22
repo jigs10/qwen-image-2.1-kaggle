@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Wan2GP
+Wan2GP/
+ckpts/
+loras/
+outputs/
+outputs2/
+gradio_outputs/
+finetunes/
+tmp/
+cache/
+storage/
+samples/
+wgp_config.json
+plugins_local.json
+
+# Models
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.gguf
+
+# Media
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.mp4
+*.webm
+*.mov
+*.mkv
+*.wav
+*.mp3
+
+# Logs / junk
+*.log
+*.zip
+.DS_Store
