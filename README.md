@@ -24,7 +24,7 @@ Only the model you pick is downloaded (about 7 GB for either).
 1. Open the notebook on Kaggle with a T4 GPU and internet on.
 2. Set `MODEL` to `'turbo'` or `'base'`.
 3. Run the cells in order.
-4. In Wan2GP, pick the model from the dropdown. If it is not listed, add the local files as a finetune (below).
+4. In Wan2GP, pick the model from the dropdown. And then, add the local files as a finetune (below).
 
 ### Main checkpoint
 
@@ -49,6 +49,15 @@ Base:
 Architecture: `qwen_image_21_7B`
 
 Keep the default Qwen Image 2.1 VAE.
+
+## Fix Torch Stack and NumPy
+
+Wan2GP crashes on launch on Kaggle without this patch, so don't skip the "Fix Torch Stack and NumPy" cell in the notebook. It fixes two errors:
+
+- PyTorch and TorchAudio built for different CUDA versions
+- NumPy too new for Numba
+
+Run it after the requirements install and before launching Wan2GP. Run it again in every fresh session.
 
 ## Settings
 
