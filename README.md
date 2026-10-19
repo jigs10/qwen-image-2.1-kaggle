@@ -50,15 +50,6 @@ Architecture: `qwen_image_21_7B`
 
 Keep the default Qwen Image 2.1 VAE.
 
-## Fix Torch Stack and NumPy
-
-Wan2GP crashes on launch on Kaggle without this patch, so don't skip the "Fix Torch Stack and NumPy" cell in the notebook. It fixes two errors:
-
-- PyTorch and TorchAudio built for different CUDA versions
-- NumPy too new for Numba
-
-Run it after the requirements install and before launching Wan2GP. Run it again in every fresh session.
-
 ## Settings
 
 | Setting | Turbo | Base |
